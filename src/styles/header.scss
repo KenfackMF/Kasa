@@ -1,0 +1,56 @@
+.navigation{
+    display: flex;
+    width: 75.5vw;
+    height: 68px;
+    justify-content: space-between;
+    align-content: flex-end;
+    margin: auto;
+    margin-top: 30px;
+
+    ul{
+        display: flex;
+        text-decoration: none;
+
+        li{
+            color: $color1;
+            cursor: pointer;
+            font-size: 24px;
+        padding: 10px;
+
+
+            &:hover{
+                color: $color1;
+                opacity: 50%;
+            }
+        }
+    }
+}
+.nav-active{
+    position: relative;
+    &::after{
+        content: "";
+        height: 2px;
+        width: 100%;
+        background: $color1;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%);
+        -webkit-animation: anim 0.2s ease forwards;
+        animation: anim .6 ease forwards;
+    
+        @-webkit-keyframes anim {
+            to {
+                width: 100%;
+            }
+        }
+            @keyframes anim {
+                to {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    
+
