@@ -1,8 +1,28 @@
-.grille-appart{
-    background: $color4;
-    margin: auto;
+// CardAppartements.scss
+
+.liste-chambres {
     width: 75.5vw;
-    height: 825px;
-    border-radius: 25px;
+    margin: auto;
     margin-top: 2rem;
-}
+    padding: 3rem;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color4;
+    border-radius: 2rem;
+    justify-content: space-between;
+  }
+  
+  .chambre {
+    width: 340px;
+    height: 340px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    justify-content: space-between;
+  }
+  
+
+  
+  

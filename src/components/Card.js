@@ -1,14 +1,11 @@
 import React from "react";
 
-function Card({ appartement }) {
+function Card({ title, cover }) {
   return (
-    <div className="card">
-      <img src={appartement.imageDeCouverture} alt={appartement.titre} />
-      <div className="card-body">
-        <h2>{appartement.titre}</h2>
-        <p>{appartement.description}</p>
-        <p>Prix: {appartement.prix} €</p>
-        <p>Surface: {appartement.surface} m²</p>
+    <div className="chambre">
+      <div className="cover" style={{ backgroundImage: `url(${cover})` }} />
+      <div className="details">
+        <span className="title">{title}</span>
       </div>
     </div>
   );

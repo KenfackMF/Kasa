@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./components/Error";
 
-const Navigation = () => {
+function Navigation() {
   return (
     <div>
       <BrowserRouter>
@@ -16,6 +16,6 @@ const Navigation = () => {
       </BrowserRouter>
     </div>
   );
-};
+}
 
 export default Navigation;
