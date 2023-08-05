@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import CardAppartements from "./components/CardAppartements";
 import Footer from "./components/Footer";
+import Routage from "./components/Routage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Banner />
       <CardAppartements />
       <Footer />
+      <Routage />
     </div>
   );
 }
