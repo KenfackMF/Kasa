@@ -1,0 +1,39 @@
+.image-propos{
+    max-width: 75.5vw;
+    min-height: 223px;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    background-image: url(../assets/source.png);
+    background-size: cover;
+    background-position: center;
+
+  
+}
+
+.flexi{
+    display: flex;
+    background-color: $color1;
+    height: 3.5rem;
+    justify-content: space-between;
+
+    h3{
+        margin-left: 1rem;
+        color: $color3;
+        font-weight: 400;
+    }
+    .arrow{
+        height: 75%;  
+        margin-right: 1rem;
+      }
+    
+}
+
+.conteneur-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 55rem;
+    margin: auto;
+    margin-top: 2rem;
+}

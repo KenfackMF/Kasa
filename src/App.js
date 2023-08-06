@@ -1,20 +1,20 @@
 import React from "react";
-import "./styles/index.scss";
-import Header from "./components/Header";
-import Banner from "./components/Banner";
-import CardAppartements from "./components/CardAppartements";
-import Footer from "./components/Footer";
-import Routage from "./components/Routage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CardDetails from "./components/CardDetails";
+import Acceuil from "./pages/Acceuil";
+import APropos from "./pages/APropos";
+import Erreur404 from "./pages/Erreur404";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Banner />
-      <CardAppartements />
-      <Footer />
-      <Routage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Acceuil />} />
+        <Route path="/APropos" element={<APropos />} />
+        <Route path="/CardDetails" element={<CardDetails />} />
+        <Route path="/Erreur404" element={<Erreur404 />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

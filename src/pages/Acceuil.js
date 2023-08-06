@@ -1,10 +1,9 @@
 import React from "react";
-import "./styles/index.scss";
-import Header from "./components/Header";
-import Banner from "./components/Banner";
-import CardAppartements from "./components/CardAppartements";
-import Footer from "./components/Footer";
-import Routage from "./components/Routage";
+import "../styles/index.scss";
+import Header from "../components/Header";
+import Banner from "../components/Banner";
+import CardAppartements from "../components/CardAppartements";
+import Footer from "../components/Footer";
 
 function Acceuil() {
   return (
@@ -13,7 +12,6 @@ function Acceuil() {
       <Banner />
       <CardAppartements />
       <Footer />
-      <Routage />
     </div>
   );
 }
