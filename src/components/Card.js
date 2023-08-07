@@ -1,8 +1,8 @@
 import React from "react";
 
-function Card({ title, cover }) {
+function Card({ id, title, cover, onClick }) {
   return (
-    <div className="chambre">
+    <div className="chambre" onClick={() => onClick(id)}>
       <div className="cover" style={{ backgroundImage: `url(${cover})` }} />
       <div className="details">
         <span className="title">{title}</span>
