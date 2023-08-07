@@ -1,0 +1,36 @@
+.conteneur-erreur{
+    display: flex;
+    flex-direction: column;
+    width: 75.5vw;
+    height: 70vh;
+    margin: auto;
+    
+}
+
+
+.erreur-404{
+    margin-top: 2rem;
+    width:40%;
+    margin: auto;
+
+
+}
+
+.texte1{
+    margin: auto;
+    font-size:2rem;
+    color: $color1;
+    
+}
+
+.texte2{
+    margin: auto;
+    color: $color1;
+    
+}
+
+.lien-acceuil{
+    font-size: 1rem;
+    text-decoration: underline;
+
+}

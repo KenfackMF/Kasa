@@ -14,8 +14,11 @@
 .flexi{
     display: flex;
     background-color: $color1;
+    width: 55rem;
     height: 3.5rem;
     justify-content: space-between;
+    align-items: center;
+    border-radius: .5rem;
 
     h3{
         margin-left: 1rem;
@@ -23,9 +26,11 @@
         font-weight: 400;
     }
     .arrow{
-        height: 75%;  
-        margin-right: 1rem;
-      }
+
+     font-size: 1.5rem;
+     color: $color3;
+     margin-right: 1rem;
+     }
     
 }
 
@@ -37,3 +42,41 @@
     margin: auto;
     margin-top: 2rem;
 }
+
+
+
+.flexi {
+    cursor: pointer;
+    padding: 10px;
+  
+    .arrow {
+      margin-left: auto;
+      transition: transform 0.3s ease;
+    }
+  
+    &.active {
+      .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  .paragraph-content {
+    display: none;
+    background-color: $color4;
+    padding: 1rem;
+    color: $color1;
+    font-size: 1rem;
+    font-weight: 100;
+    margin-top: -1.9rem;
+    border-radius: .5rem;
+  
+    p {
+      margin: 0;
+    }
+  }
+  
+  .flexi.active + .paragraph-content {
+    display: block;
+  }
+  
