@@ -16,13 +16,17 @@ function Carousel({ images }) {
 
   return (
     <div className="carousel">
-      <img src={images[currentIndex]} alt={`Imge ${currentIndex + 1}`} />
-      <button onClick={handlePrevClick}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </button>
-      <button onClick={handleNextClick}>
-        <FontAwesomeIcon icon={faChevronRight} />{" "}
-      </button>
+      <div className="carousel-images">
+        <img src={images[currentIndex]} alt={`Imge ${currentIndex + 1}`} />
+      </div>
+      <div className="carousel-controls">
+        <button onClick={handlePrevClick}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+        <button onClick={handleNextClick}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+      </div>
     </div>
   );
 }

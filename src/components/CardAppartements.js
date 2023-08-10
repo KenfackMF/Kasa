@@ -14,12 +14,13 @@ function CardAppartements() {
   return (
     <div>
       <ul className="liste-chambres">
-        {ListeChambre.map(({ id, title, cover, pictures, description, rating, location, equipments, tag }) => (
+        {ListeChambre.map(({ id, title, cover, host, pictures, description, rating, location, equipments, tag }) => (
           <Card
             key={id}
             id={id}
             title={title}
             cover={cover}
+            host={host}
             pictures={pictures}
             description={description}
             rating={rating}
