@@ -1,33 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useParams } from "react-router-dom";
 import { ListeChambre } from "../data/ListeChambres";
 import Carousel from "./Carroussel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import Erreur404 from "../pages/Erreur404";
+import Accordeon from "./Accordeon";
 
 function CardDetails() {
-  const [activeDescription, setActiveDescription] = useState(false);
-  const [activeEquipement, setActiveEquipement] = useState(false);
-
   const { id } = useParams();
   const chambre = ListeChambre.find((chambre) => chambre.id === id);
 
   if (!chambre) {
-    return <div>Chambre non trouvée</div>;
+    return <Erreur404 />;
   }
-
-  const toggleDescriptionVisibility = () => {
-    setActiveDescription(!activeDescription);
-    setActiveEquipement(false); // Fermer le panneau d'équipement si ouvert
-  };
-
-  const toggleEquipementVisibility = () => {
-    setActiveEquipement(!activeEquipement);
-    setActiveDescription(false); // Fermer le panneau de description si ouvert
-  };
 
   return (
     <div>
@@ -64,30 +52,21 @@ function CardDetails() {
         </div>
 
         <div className="block-bas">
-          <div className="container-descrition">
-            <div className={`description ${activeDescription ? "active" : ""}`} onClick={toggleDescriptionVisibility}>
-              <h4>Description </h4> <FontAwesomeIcon icon={faChevronUp} className={`arrow ${activeDescription ? "rotate" : ""}`} />
-            </div>
-            {activeDescription && (
-              <div className="description-texte">
-                <p>{chambre.description}</p>
-              </div>
-            )}
+          <div className="container-description">
+            <Accordeon title="Description" content={<p>{chambre.description}</p>} />
           </div>
 
-          <div className="container-equi">
-            <div className={`equipement ${activeEquipement ? "active" : ""}`} onClick={toggleEquipementVisibility}>
-              <h4>Equipement</h4> <FontAwesomeIcon icon={faChevronUp} className={`arrow ${activeEquipement ? "rotate" : ""}`} />
-              {activeEquipement && (
-                <div className="description-equi">
-                  <div className="equipement-list">
-                    {chambre.equipments.map((equipment, index) => (
-                      <p key={index}>{equipment}</p>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+          <div className="container-equipement">
+            <Accordeon
+              title="Equipements"
+              content={
+                <ul className="description-texte">
+                  {chambre.equipments.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                  ))}
+                </ul>
+              }
+            />
           </div>
         </div>
       </div>

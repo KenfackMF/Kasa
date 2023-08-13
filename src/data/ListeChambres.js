@@ -147,7 +147,7 @@ export const ListeChambre = [
     },
     rating: "3",
     location: "Ile de France - Paris 18e",
-    equipments: ["Salle de bains", "Frigo", "Wi-fi", "SÃ¨che Cheveux", "Bureau", "Parking"],
+    equipments: ["Salle de bains", "Frigo", "Wi-fi", "Sèche Cheveux", "Bureau", "Parking"],
     tags: ["Transports", "Cheap", "18ème"],
   },
   {
@@ -163,14 +163,14 @@ export const ListeChambre = [
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-6.jpg",
     ],
     description:
-      "Ce superbe appartement vous surprendra par son charme. Entièrement refait à neuf, il est équipé avec goût. La taille des pièces vous fera douter que vous êtes Ã  Paris. Mais il vous suffit de sortir pour voir que vous êtes au coeur des plus belles attractions de Paris : le Louvre, la Tour Eiffel, le Grand Palais sont à deux pas. A vous de venir découvrir Paris !",
+      "Ce superbe appartement vous surprendra par son charme. Entièrement refait à neuf, il est équipé avec goût. La taille des pièces vous fera douter que vous êtes à Paris. Mais il vous suffit de sortir pour voir que vous êtes au coeur des plus belles attractions de Paris : le Louvre, la Tour Eiffel, le Grand Palais sont à deux pas. A vous de venir découvrir Paris !",
     host: {
       name: "Sébastien Fournier",
       picture: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-5.jpg",
     },
     rating: "5",
     location: "Ile de France - Paris 6e",
-    equipments: ["Wi-fi", "Sèche Cheveux", "Machine Ã  laver", "Parking", "Lit King Size", "Ascenseur"],
+    equipments: ["Wi-fi", "Sèche Cheveux", "Machine à laver", "Parking", "Lit King Size", "Ascenseur"],
     tags: ["Luxe", "Tour Eiffel", "T3", "6ème"],
   },
   {
@@ -185,14 +185,14 @@ export const ListeChambre = [
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-8-5.jpg",
     ],
     description:
-      "Paris vous tend les bras ! En famille ou entre amis, venez dÃ©couvrir la ville de l'amour dans un appartement de goÃ»t. Vous pourrez profiter de tous les commerces seulement Ã  quelques minutes de l'appartement. Sa proximité avec la gare Montparnasse en fait également un choix idéal pour celles et ceux qui doivent prendre un train.",
+      "Paris vous tend les bras ! En famille ou entre amis, venez dÃ©couvrir la ville de l'amour dans un appartement de goût. Vous pourrez profiter de tous les commerces seulement Ã  quelques minutes de l'appartement. Sa proximité avec la gare Montparnasse en fait également un choix idéal pour celles et ceux qui doivent prendre un train.",
     host: {
       name: "Adrien Chiran",
       picture: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-6.jpg",
     },
     rating: "4",
     location: "Ile de France - Paris 14e",
-    equipments: ["Climatisation", "Machine Ã  laver", "SÃ¨che Cheveux", "Wi-fi", "Parking"],
+    equipments: ["Climatisation", "Machine à laver", "Sèche Cheveux", "Wi-fi", "Parking"],
     tags: ["Montparnasse", "Commerces", "Famille"],
   },
   {
@@ -226,7 +226,7 @@ export const ListeChambre = [
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-10-3.jpg",
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-10-4.jpg",
     ],
-    description: "Situé en plein coeur du Marais, notre studio est idÃ©al pour les touristes en quête de découverte. Sa cuisine toute équipée est particulièrement pratique.",
+    description: "Situé en plein coeur du Marais, notre studio est idéal pour les touristes en quête de découverte. Sa cuisine toute équipée est particulièrement pratique.",
     host: {
       name: "Victor Moran",
       picture: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-7.jpg",
@@ -340,7 +340,7 @@ export const ListeChambre = [
       picture: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-10.jpg",
     },
     rating: "3",
-    location: "Ile de France - La DÃ©fense",
+    location: "Ile de France - La Défense",
     equipments: ["Baie vitrée", "Télévision", "Four", "Frigo", "Wi-fi", "Micro-Ondes", "Parking"],
     tags: ["La Défense", "Loft", "Luxe"],
   },

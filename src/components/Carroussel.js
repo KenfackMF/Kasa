@@ -19,6 +19,11 @@ function Carousel({ images }) {
       <div className="carousel-images">
         <img src={images[currentIndex]} alt={`Imge ${currentIndex + 1}`} />
       </div>
+      <div className="compteur">
+        <p>
+          {currentIndex + 1}/{images.length}
+        </p>
+      </div>
       <div className="carousel-controls">
         <button onClick={handlePrevClick}>
           <FontAwesomeIcon icon={faChevronLeft} />
