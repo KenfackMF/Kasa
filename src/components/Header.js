@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <div className="navigation">
-      <img src={logo} alt="Logo kasa" />
+      <img src={logo} alt="Logo kasa" className="logo-kasa" />
 
       <ul className="pages">
         <NavLink end to="/" className={location.pathname === "/" ? "nav-active" : ""}>

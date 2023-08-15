@@ -22,33 +22,35 @@ function CardDetails() {
       <Header />
       <div className="card-details">
         <Carousel images={chambre.pictures} />
+
         <div className="block-haut">
-          <div className="sur-titre">
-            <h3 className="titre">{chambre.title}</h3>
-            <p className="location"> {chambre.location}</p>
-          </div>
-          <div className="block-host">
-            <p className="host"> {chambre.host.name}</p>
-            <div className="rond" style={{ backgroundImage: `url(${chambre.host.picture})` }}>
-              {" "}
+          <div className="block-gauche">
+            <div className="sur-titre">
+              <h3 className="titre">{chambre.title}</h3>
+              <p className="location"> {chambre.location}</p>
+            </div>
+            <div className="tag-container">
+              {chambre.tags.map((tag, index) => (
+                <div key={index} className="tag-item">
+                  {tag}
+                </div>
+              ))}
             </div>
           </div>
-        </div>
 
-        <div className="block-milieu">
-          <div className="tag-container">
-            {chambre.tags.map((tag, index) => (
-              <div key={index} className="tag-item">
-                {tag}
+          <div className="block-droit">
+            <div className="block-host">
+              <p className="host"> {chambre.host.name}</p>
+              <div className="rond" style={{ backgroundImage: `url(${chambre.host.picture})` }}>
+                {" "}
               </div>
-            ))}
+            </div>
+            <p className="rating">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <FontAwesomeIcon key={index} icon={faStar} className={index < chambre.rating ? "etoile-colore" : "etoile-grise"} />
+              ))}
+            </p>
           </div>
-
-          <p className="rating">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <FontAwesomeIcon key={index} icon={faStar} className={index < chambre.rating ? "etoile-colore" : "etoile-grise"} />
-            ))}
-          </p>
         </div>
 
         <div className="block-bas">

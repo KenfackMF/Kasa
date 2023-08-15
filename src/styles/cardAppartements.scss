@@ -13,16 +13,23 @@
     justify-content: space-between;
   }
   
-  .chambre {
-    width: 340px;
-    height: 340px;
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    justify-content: space-between;
-  }
+ 
   
 
   
   
+@media screen and (max-width: 768px) {
+  .liste-chambres {
+    width: auto;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    justify-content: center;
+    background-color: $color3;
+    gap: 0;
+    padding: 0;
+  }
+  
+}

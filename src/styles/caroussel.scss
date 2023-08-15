@@ -72,3 +72,67 @@
   .carousel-controls button:last-child {
     justify-content: flex-end;
   }
+
+
+
+  @media screen and (max-width: 768px) {
+
+    .carousel {
+      position: relative;
+      height: 255px;
+      width: auto;
+      margin: auto;
+      border-radius: 1rem;
+      overflow: hidden;
+      background-color: aqua;
+  
+    }
+  
+    .carousel-images {
+      position: relative;
+      display: flex;
+      max-height: 255px;
+      height: 50vh;
+      align-content: center;
+      justify-content: center; 
+  }
+  
+  .carousel-images img {
+      width: 100%;
+      max-width: 100%;    
+      max-height: 100%; 
+      object-fit: cover;
+    }
+    
+  .carousel-controls {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+  
+    }
+
+
+
+
+    .compteur {
+  
+      display: none;
+    }
+
+         button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: $color3;
+
+ 
+  }
+  }

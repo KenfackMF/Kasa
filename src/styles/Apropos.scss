@@ -12,14 +12,43 @@
 }
 
 
-
-.conteneur-flex{
+.container-accordeons{
     display: flex;
     flex-direction: column;
+    width: 65vw;
     gap: 2rem;
-    width: 60rem;
     margin: auto;
     margin-top: 2rem;
+
 }
 
 
+
+@media screen and (max-width: 768px) {
+
+    .image-propos{
+        max-width: none;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        background-size: cover;
+        background-position: center;
+       
+    }
+
+
+
+    .container-accordeons{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        margin-left:2rem ;
+        width: auto;
+
+}
+.accordeon{
+    width: 100%;
+}
+}

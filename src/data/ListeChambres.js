@@ -185,7 +185,7 @@ export const ListeChambre = [
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-8-5.jpg",
     ],
     description:
-      "Paris vous tend les bras ! En famille ou entre amis, venez dÃ©couvrir la ville de l'amour dans un appartement de goût. Vous pourrez profiter de tous les commerces seulement Ã  quelques minutes de l'appartement. Sa proximité avec la gare Montparnasse en fait également un choix idéal pour celles et ceux qui doivent prendre un train.",
+      "Paris vous tend les bras ! En famille ou entre amis, venez découvrir la ville de l'amour dans un appartement de goût. Vous pourrez profiter de tous les commerces seulement à quelques minutes de l'appartement. Sa proximité avec la gare Montparnasse en fait également un choix idéal pour celles et ceux qui doivent prendre un train.",
     host: {
       name: "Adrien Chiran",
       picture: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-6.jpg",

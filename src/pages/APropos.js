@@ -8,22 +8,26 @@ function APropos() {
     <div>
       <Header />
       <div className="image-propos"></div>
-      <div className="conteneur-flex">
+      <div className="container-accordeons">
         <Accordeon
+          className="accordeon"
           title="Flexibilité"
           content={
             <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conforment aux logements, et toutes les informations sont régulièrements vérifiées pas nos équipes.</p>
           }
         />
         <Accordeon
+          className="accordeon"
           title="Respect"
           content={<p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation de voisinage entrainera une exclusion de notre plateforme.</p>}
         />
         <Accordeon
+          className="accordeon"
           title="Services"
           content={<p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation de voisinage entrainera une exclusion de notre plateforme.</p>}
         />
         <Accordeon
+          className="accordeon"
           title="Sécutité"
           content={
             <p>

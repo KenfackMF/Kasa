@@ -35,7 +35,7 @@ a{
     color: $color1;
     cursor: pointer;
     font-size: 2rem;
-    padding: 10px;
+    padding: 5px;
     list-style: none;
     text-decoration: none;
 }
@@ -54,5 +54,55 @@ a{
       -webkit-animation: anim 0.2s ease forwards;
       animation: anim 0.6s ease forwards;
     }
-  }
+  
+}
 
+
+@media screen and (max-width: 768px) {
+
+    
+
+    .navigation{
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        margin: 1rem 2rem 1rem;
+    }
+
+ul {
+  margin-top: 1rem;
+  align-items: center;
+}
+
+li {
+  font-size: 1rem;  
+  text-transform: uppercase;
+}
+
+a {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.logo-kasa{
+    width: 9rem;
+    height: auto;
+}
+
+.nav-active {
+    position: relative;
+  
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background: $color1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-animation: anim 0.2s ease forwards;
+      animation: anim 0.6s ease forwards;
+    }
+  
+}
+}
