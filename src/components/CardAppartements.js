@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ListeChambre } from "../data/ListeChambres";
 import Card from "./Card";
 
 function CardAppartements() {
   const navigate = useNavigate();
+  const [listeChambres, setListeChambres] = useState([]);
+
+  useEffect(() => {
+    fetch("/ListeChambres.json")
+      .then((response) => response.json())
+      .then((data) => setListeChambres(data))
+      .catch((error) => console.error("Erreur lors du chargement du fichier JSON", error));
+  }, []);
 
   const handleCardClick = (id) => {
-    // Rediriger l'utilisateur vers la page CardDetails avec l'ID de la chambre
     navigate(`/CardDetails/${id}`);
   };
 
   return (
     <div>
-      <ul className="liste-chambres">
-        {ListeChambre.map(({ id, title, cover, host, pictures, description, rating, location, equipments, tag }) => (
+      <div className="liste-chambres">
+        {listeChambres.map(({ id, title, cover, host, pictures, description, rating, location, equipments, tag }) => (
           <Card
             key={id}
             id={id}
@@ -27,10 +33,10 @@ function CardAppartements() {
             location={location}
             equipments={equipments}
             tag={tag}
-            onClick={() => handleCardClick(id)} // Passer la fonction de gestion du clic à la card
+            onClick={() => handleCardClick(id)}
           />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

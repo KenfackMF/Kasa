@@ -1,17 +1,26 @@
-import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import React, { useState, useEffect } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
-import { ListeChambre } from "../data/ListeChambres";
-import Carousel from "./Carroussel";
+import Carousel from "../components/Carroussel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import Erreur404 from "../pages/Erreur404";
-import Accordeon from "./Accordeon";
+import Erreur404 from "./Erreur404";
+import Accordeon from "../components/Accordeon";
 
 function CardDetails() {
   const { id } = useParams();
-  const chambre = ListeChambre.find((chambre) => chambre.id === id);
+  const [chambre, setChambre] = useState(null);
+
+  useEffect(() => {
+    fetch("/ListeChambres.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const foundChambre = data.find((chambre) => chambre.id === id);
+        setChambre(foundChambre);
+      })
+      .catch((error) => console.error("Erreur lors du chargement du fichier JSON", error));
+  }, [id]);
 
   if (!chambre) {
     return <Erreur404 />;

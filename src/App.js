@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CardDetails from "./components/CardDetails";
+import CardDetails from "./pages/CardDetails";
 import Acceuil from "./pages/Acceuil";
 import APropos from "./pages/APropos";
 import Erreur404 from "./pages/Erreur404";
