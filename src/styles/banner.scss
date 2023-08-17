@@ -8,7 +8,10 @@
     margin: auto;
     margin-top: 2rem;
     border-radius: 2rem;
-    background-image: url(../assets/IMG.png);
+    background-image: url(../assets/source_1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: $font-1;
     font-size: 2rem;
     font-weight: 100;
@@ -28,6 +31,7 @@
     h3{
         position: relative;
         color: white;
+        font-size: 3rem;
         font-family: $font-1;
         font-weight: 200;
     }
@@ -69,12 +73,12 @@
         h3 {
             position: relative;
             color: white;
+            font-size: 1.5rem;
             font-family: $font-1;
             font-weight: 200;
             white-space: pre-line;
-
-            width: 150px;
-            margin-left: -8rem;
+            width: 200px;
+            margin-left: -6rem;
         }
     }
 }
