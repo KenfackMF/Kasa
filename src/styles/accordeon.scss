@@ -1,86 +1,82 @@
-
-.bande-rouge{
-    display: flex;
-    background-color: $color1;
-    width: auto;
-    height: 3.5rem;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: .5rem;
-
-    h4{
-        margin-left: 1rem;
-        color: $color3;
-        font-weight: 400;
-    }
-    .arrow{
-
-     font-size: 1.5rem;
-     color: $color3;
-     margin-right: 1rem;
-     }
-    
-}
-
-
-
 .bande-rouge {
-    padding: 10px;
-  
+  display: flex;
+  background-color: $color1;
+  width: auto;
+  height: 3.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: .5rem;
+  padding: 10px;
+
+  h4 {
+    margin-left: 1rem;
+    color: $color3;
+    font-weight: 400;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+    color: $color3;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+  }
+
+  &.active {
     .arrow {
-        cursor: pointer;
-      margin-left: auto;
-      transition: transform 0.3s ease;
-    }
-  
-    &.active {
-      .arrow {
-        transform: rotate(180deg);
-      }
+      transform: rotate(180deg);
     }
   }
-  
-  .container-texte {
-    display: none;
-    background-color: $color4;
-    padding: 1rem;
-    color: $color1;
-    font-size: 1rem;
-    font-weight: 100;
-    border-radius: .5rem;
-    opacity: 0;
-    
-  
-    p {
-      margin: 0;
-    }
-     
+}
+
+.container-texte {
+  display: none;
+  background-color: $color4;
+  padding: 1rem;
+  color: $color1;
+  font-size: 1rem;
+  font-weight: 100;
+  border-radius: .5rem;
+  opacity: 0;
+  position: relative;
+  z-index: -100;
+
+  p {
+    margin: 0;
+  }
+
   @keyframes fade-in {
     from {
       opacity: 0;
-      transform: translateY(-10px); 
+      transform: translateY(-10px);
     }
     to {
       opacity: 1;
-      transform: translateY(0); 
+      transform: translateY(0);
     }
   }
 
- 
-  animation: fade-in 0.5s ease-in-out; 
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateY(10);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(0);
+    }
+  }
 
-  
-}
-
-  
-  
-  .bande-rouge.active + .container-texte {
+  &.active {
     display: block;
     opacity: 1;
+    animation: fade-in 0.8s ease-in-out;
   }
-  
 
-  .bande-rouge.inactive + .container-texte {
+  &.inactive {
     display: none;
     opacity: 0;
+    animation: fade-out 0.8s ease-in-out;
   }
+}

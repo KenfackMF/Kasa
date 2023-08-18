@@ -1,13 +1,13 @@
 // CardAppartements.scss
 
 .liste-chambres {
-    width: 75.5vw;
+  display: flex;
+    flex-wrap: wrap;
+    width: 75.5%;
     margin: auto;
-    margin-top: 2rem;
     padding: 3rem;
     gap: 2rem;
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 2rem;
     background-color: $color4;
     border-radius: 2rem;
     justify-content: space-between;
@@ -20,7 +20,7 @@
   
 @media screen and (max-width: 768px) {
   .liste-chambres {
-    width: auto;
+    width: 85%;
     margin: auto;
     margin-top: 2rem;
     display: flex;
@@ -28,7 +28,7 @@
     border-radius: 2rem;
     justify-content: center;
     background-color: $color3;
-    gap: 0;
+    gap: 2rem;
     padding: 0;
   }
   
