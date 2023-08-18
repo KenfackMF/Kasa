@@ -68,6 +68,8 @@
 
  
   animation: fade-in 0.5s ease-in-out; 
+
+  
 }
 
   
@@ -77,3 +79,8 @@
     opacity: 1;
   }
   
+
+  .bande-rouge.inactive + .container-texte {
+    display: none;
+    opacity: 0;
+  }

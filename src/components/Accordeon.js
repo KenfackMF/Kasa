@@ -13,7 +13,7 @@ const Accordeon = ({ title, content }) => {
 
   return (
     <div className="accordeon">
-      <div className={`bande-rouge ${active ? "active" : ""}`} onClick={toggleVisibility}>
+      <div className={`bande-rouge ${active ? "active" : "inactive"}`} onClick={toggleVisibility}>
         <h4>{title}</h4>
         <FontAwesomeIcon icon={faChevronUp} className={`arrow ${active ? "rotate" : ""}`} />
       </div>
